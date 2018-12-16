@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_transparent_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview_dialog_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="友借"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_big" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999"></View>
+
+    <TextView
+        android:id="@+id/textview_dialog_util_tips2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:minHeight="90dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="10dp"
+        android:text="@string/sys_setting_dialog_logout"
+        android:textColor="@color/text_color_black"
+        android:textSize="@dimen/text_size_middle_s" />
+
+
+    <TextView
+        android:id="@+id/button_dialog_logout_sure2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/red_button_shape"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/sys_setting_dialog_sure"
+        android:textColor="@color/text_color_white_dialog"
+        android:textSize="@dimen/text_size_middle_s" />
+</LinearLayout>

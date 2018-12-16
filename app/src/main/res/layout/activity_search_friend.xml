@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edittext_addfriend"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/gray_btn_bg"
+            android:drawableLeft="@drawable/cqd_contact_icon_search"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="输入手机号直接添加好友"
+            android:inputType="numberSigned"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="15dp"
+            android:textColor="@color/text_color_33gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textview_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/primary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lineaylayout_apply_friend"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/text_color_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageview_addfriend_icon_one"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/cqd_contact_icon_portrait_default" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview_addfriend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_color_33gray"
+                android:textSize="@dimen/text_size_middle_s" />
+
+            <TextView
+                android:id="@+id/textview_addfriend_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@color/text_color_33gray"
+                android:textSize="@dimen/text_size_middle_s" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textview_addfriend"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/backgound_button_blue_shape"
+            android:gravity="center"
+            android:text="添加"
+            android:visibility="gone"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/text_size_middle_s" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textview_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="对不起，您搜索的好友暂未在平台注册。"
+        android:textColor="@color/text_color_99gray"
+        android:textSize="13sp"
+        android:visibility="gone" />
+</LinearLayout>

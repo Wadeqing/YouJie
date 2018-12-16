@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_tar_heigh"
+        android:background="@color/color00"
+        android:visibility="visible" />
+    <!--<include layout="@layout/view_title" />-->
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_make_money"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.youjie.android.pulltorefresh.PullToRefreshListView
+            android:id="@+id/pulltorefresh_make_money"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageview_makemoney"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:background="@color/colorPrimary"
+                android:visibility="gone" />
+
+        </com.youjie.android.pulltorefresh.PullToRefreshListView>
+
+        <com.youjie.android.view.MyWebView
+            android:id="@+id/webview_make_money"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <!-- </android.support.v4.widget.SwipeRefreshLayout>-->
+        <TextView
+            android:id="@+id/textview_activity"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:background="@drawable/cqd_articles_btn_bg"
+            android:gravity="center"
+            android:text="活动"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/text_size_middle"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:indeterminateOnly="false"
+            android:max="100"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/linearylaout_no_internet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text_color_fb"
+            android:clickable="false"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="92dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/cqd_defaultpage_icon_withoutinternet" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:text="网络连接失败"
+                android:textColor="@color/text_color_99gray"
+                android:textSize="@dimen/text_size_big" />
+
+            <TextView
+                android:id="@+id/textview_connection_internet"
+                android:layout_width="87dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/backgroud_bg_gray_corner_2dp"
+                android:gravity="center"
+                android:text="点击重试"
+                android:textColor="@color/text_color_99gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

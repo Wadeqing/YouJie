@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_title" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="请您在下方输入栏留下您对我们的意见反馈，\n我们重视您的每一条建议，感谢您的支持。"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="反馈内容"
+                android:textColor="@color/text_color_33gray"
+                android:textSize="@dimen/text_size_middle_s" />
+
+            <EditText
+                android:id="@+id/edittext_feedback_content"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:gravity="top"
+                android:hint="@string/feedback_context_hint"
+                android:padding="10dp"
+                android:textColor="@color/text_color_33gray"
+                android:textColorHint="@color/text_color_99gray"
+                android:textSize="@dimen/text_size_middle_s" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/feedback_slogan"
+                android:textSize="@dimen/text_size_big"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/feedback_your_way"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_middle_s" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feedback_choice"
+                    android:textColor="@color/text_color_99gray"
+                    android:textSize="@dimen/text_size_middle_s" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edittext_feedback_contact"
+                android:layout_width="fill_parent"
+                android:layout_height="33dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:hint="@string/feedback_way_hint"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_middle_s" />
+
+            <Button
+                android:id="@+id/button_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/backgroud_bg_red_corner"
+                android:text="@string/feedback_btn"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/text_size_big" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

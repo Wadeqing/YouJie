@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="com.tencent.xinge:xinge-3.1.4-alpha">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/xinge-3.1.4-alpha.aar/d736b35c6b44be56eae98454c33db6cd/jars/libs/Xg_sdk_v3.1_20170626_1710.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/xinge-3.1.4-alpha.aar/d736b35c6b44be56eae98454c33db6cd/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/xinge-3.1.4-alpha.aar/d736b35c6b44be56eae98454c33db6cd/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/xinge-3.1.4-alpha.aar/d736b35c6b44be56eae98454c33db6cd/jars/libs/jg_filter_sdk_1.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/xinge-3.1.4-alpha.aar/d736b35c6b44be56eae98454c33db6cd/jars/libs/wup-1.0.0.E-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tencent.xinge/xinge/3.1.4-alpha/d589387092c464cea11f78215edf592fffc81726/xinge-3.1.4-alpha-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

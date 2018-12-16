@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@drawable/gray_btn_bg" />
+
+    <FrameLayout
+        android:id="@+id/framlayout_all_borrowing_purposes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/text_color_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="借款用途:"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_big" />
+
+                <TextView
+                    android:id="@+id/textview_borrowing_purposes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left"
+                    android:text="（请选择一下任意一项借款目的）"
+                    android:textColor="@color/text_color_66gray"
+                    android:textSize="@dimen/text_size_middle_s" />
+
+            </LinearLayout>
+
+            <com.youjie.android.view.MyGridView
+                android:id="@+id/single_choice_view_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:focusable="true"
+                android:numColumns="3"
+                android:verticalSpacing="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="借款理由:"
+                    android:textSize="@dimen/text_size_big" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_btn_bg"
+                    android:hint="（请选择一下任意一项借款目的）"
+                    android:padding="10dp"
+                    android:textColor="@color/text_color_66gray"
+                    android:textSize="@dimen/text_size_middle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="公开说明:"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_big" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint="（请输入详细借款用途及偿还能力说明）"
+                    android:textColor="@color/text_color_66gray"
+                    android:textSize="@dimen/text_size_middle_s" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edittext_public_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/input_white_bg"
+                        android:gravity="top"
+                        android:hint="这里是针对上述各个场景的默认一句话的描述"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/text_color_33gray"
+                        android:textColorHint="@color/text_color_66gray"
+                        android:textSize="@dimen/text_size_middle_s" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="10dp"
+                        android:text="0/300字"
+                        android:textColor="@color/text_gray"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="附加图片："
+                        android:textColor="@color/text_color_33gray"
+                        android:textSize="@dimen/text_size_big" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="（可选）"
+                        android:textColor="@color/text_color_66gray"
+                        android:textSize="@dimen/text_size_middle_s" />
+
+                    <TextView
+                        android:id="@+id/textview_upload_notice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:autoLink="all"
+                        android:gravity="right"
+                        android:text="上传须知"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_size_middle_s" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="7dp"
+                    android:text="(如户口本、工资/账单、个人相关社会信息、消费品等)"
+                    android:textColor="@color/text_color_66gray"
+                    android:textSize="@dimen/text_size_middle_s" />
+
+                <LinearLayout
+                    android:id="@+id/lineaylayout_borrowing_purposes_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imageview_photo_one"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="30dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imageview_photo_two"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="30dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imageview_photo_three"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/cqd_borrowing_details_icon_add"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imageview_photo_four"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/cqd_borrowing_details_icon_add" />
+                </LinearLayout>
+
+                <GridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="28dp"
+                    android:layout_marginTop="10dp"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="10dp">
+
+                </GridView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_sure_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/backgroud_bg_red_corner"
+                android:padding="10dp"
+                android:text="确定"
+                android:textColor="@color/text_color_white" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

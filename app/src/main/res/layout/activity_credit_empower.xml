@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginTop="15dp"
+                android:text="        友借平台依法央行信用平台，严格遵循相关条例并确保用户隐私安全。为了保障您的账户安全和借贷管流程监管，请您在实名认证后开启征信授权。"
+                android:textColor="@color/text_color_99gray"
+                android:textSize="@dimen/text_size_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginTop="10dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/text_color_ccgray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/text_color_white"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="征信授权隐私"
+                    android:textColor="@color/text_color_66gray"
+                    android:textSize="@dimen/text_size_middle" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="•   用户征信记录在未授权情况下不会被他人及好友查看"
+                    android:textColor="@color/text_color_99gray"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="•   未经授权用户同意，任何平台和用户无法调取个人征信记录"
+                    android:textColor="@color/text_color_99gray"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="征信报告从哪里来"
+                    android:textColor="@color/text_color_99gray"
+                    android:textSize="@dimen/text_size_middle_s" />
+
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/cqd_personal_usercenter_img" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="征信授权后你可以：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="15dp"
+                        android:drawableTop="@drawable/cqd_personal_usercenter_icon_report"
+                        android:gravity="center"
+                        android:text="查看征信报告"
+                        android:textColor="@color/text_color_66gray"
+                        android:textSize="@dimen/text_size_middle_s" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="15dp"
+                        android:drawableTop="@drawable/cqd_personal_usercenter_icon_security"
+                        android:gravity="center"
+                        android:text="维护信用安全"
+                        android:textColor="@color/text_color_66gray"
+                        android:textSize="@dimen/text_size_middle_s" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="15dp"
+                        android:drawableTop="@drawable/cqd_personal_usercenter_icon_loan"
+                        android:gravity="center"
+                        android:text="安全信用贷款"
+                        android:textColor="@color/text_color_66gray"
+                        android:textSize="@dimen/text_size_middle_s" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_start_empower"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/backgroud_bg_red_corner"
+                android:text="开始授权"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/text_size_super_big" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

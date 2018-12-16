@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_tar_heigh"
+        android:background="@color/color00"
+        android:visibility="visible" />
+
+    <include layout="@layout/view_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud_gray"
+        android:padding="6dp">
+
+        <EditText
+            android:id="@+id/editext_search"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/text_color_white"
+            android:drawableLeft="@drawable/cqd_contact_icon_search"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="搜索联系人"
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lineaylayout_lock_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_header"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="友借好友" />
+
+                <TextView
+                    android:id="@+id/textview_header_lock_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/cqd_contact_icon_right_gray"
+                    android:text="查看全部"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_middle_s" />
+            </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefreshlayout_address_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+                    android:id="@+id/stickylist_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"></se.emilsjolander.stickylistheaders.StickyListHeadersListView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+        <com.youjie.android.view.QuickIndexBar
+            android:id="@+id/quickIndexBar"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#00000000" />
+
+        <View
+            android:id="@+id/view_address_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+
+        </View>
+
+        <TextView
+            android:id="@+id/textview_word_center"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="#99111111"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/text_size_23_sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lineaylayout_all_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/cqd_contact_default" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:text="请开启通讯录"
+            android:textColor="@color/text_color_33gray"
+            android:textSize="@dimen/text_size_big" />
+    </LinearLayout>
+
+
+</LinearLayout>

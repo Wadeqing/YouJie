@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout_sys_message"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/text_color_white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageview_sys_message_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/cqd_personal_message_icon_system" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview_sys_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="系统消息"
+                android:textColor="@color/text_color_33gray"
+                android:textSize="@dimen/text_size_big" />
+
+            <TextView
+                android:id="@+id/textview_sys_message_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:textColor="@color/text_color_99gray"
+                android:textSize="@dimen/text_size_middle_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview_message_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/text_color_99gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textview_message_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/backgroud_bg_red_corner_10"
+                android:gravity="center"
+                android:minWidth="18dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:textColor="@color/text_color_white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="15dp">
+
+        <LinearLayout
+            android:id="@+id/linearlayout_message_without"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@color/backgroud_gray"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textview_message_remind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/message_without_remind"
+                android:textColor="@color/text_color_66gray"
+                android:textSize="@dimen/text_size_big" />
+        </LinearLayout>
+
+        <com.youjie.android.pulltorefresh.PullToRefreshListView
+            android:id="@+id/listview_user_message"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/text_color_eegray"
+            android:paddingLeft="15dp" />
+
+    </FrameLayout>
+
+</LinearLayout>

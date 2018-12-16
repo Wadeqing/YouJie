@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title"></include>
+
+    <LinearLayout
+        android:id="@+id/select_card_linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_info_height"
+        android:layout_marginTop="15dp"
+        android:background="@color/text_color_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/card_image"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/card_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_33gray"
+                android:textSize="@dimen/text_size_big" />
+
+            <TextView
+                android:id="@+id/card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_33gray"
+                android:textSize="@dimen/text_size_big" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="15dp"
+            android:src="@drawable/cqd_contact_icon_right_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/text_color_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="金额"
+            android:textColor="@color/text_color_33gray" />
+
+        <EditText
+            android:id="@+id/money_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="22dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:inputType="numberDecimal"
+            android:textColor="@color/text_color_33gray"
+            android:textColorHint="@color/text_color_99gray"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/money_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/backgroud_bg_dip_gray_corner"
+        android:enabled="false"
+        android:textColor="@color/text_color_white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout_take_money_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="温馨提示"
+            android:textColor="@color/text_color_66gray"
+            android:textSize="@dimen/text_size_big" />
+
+        <TextView
+            android:id="@+id/textview_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/Take_hint_1"
+            android:textColor="@color/text_color_66gray"
+            android:textSize="@dimen/text_size_middle" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/Take_hint_2"
+            android:textColor="@color/text_color_66gray"
+            android:textSize="@dimen/text_size_middle"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/Take_hint_3"
+            android:textColor="@color/text_color_66gray"
+            android:textSize="@dimen/text_size_middle"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

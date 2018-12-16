@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/view_divide"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/text_color_eegray"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_letter"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:text="A"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/text_color_eegray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageview_address_list_user_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/cqd_contact_icon_portrait_default" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="用户名"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textview_address_list_user_phone_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="15767677676"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/button_friend_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:src="@drawable/cqd_contact_icon_right_gray"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button_address_list"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:text="短信邀请"
+            android:textColor="@color/text_color_white"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</LinearLayout>

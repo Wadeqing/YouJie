@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_eegray"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <TextView
+        android:id="@+id/textview_friend_apply"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/text_color_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="@string/friend_notify"
+        android:textColor="@color/text_color_33gray"
+        android:textSize="@dimen/text_size_super_big"
+        android:visibility="gone" />
+
+    <com.youjie.android.pulltorefresh.PullToRefreshListView
+        android:id="@+id/listview_friend_apply"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:background="@color/text_color_white"
+        android:dividerPadding="1dp"/>
+</LinearLayout>

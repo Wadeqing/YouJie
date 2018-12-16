@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud_gray"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <EditText
+            android:id="@+id/editext_search_all_friend"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/text_color_white"
+            android:drawableLeft="@drawable/cqd_contact_icon_search"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="搜索联系人"
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="全部好友"
+        android:textColor="@color/text_color_66gray"
+        android:textSize="@dimen/text_size_middle_s" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.youjie.android.pulltorefresh.PullToRefreshListView
+            android:id="@+id/pulltorefresh_list_all_friend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.youjie.android.pulltorefresh.PullToRefreshListView>
+
+        <View
+            android:id="@+id/view_all_friend"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible"></View>
+    </RelativeLayout>
+</LinearLayout>

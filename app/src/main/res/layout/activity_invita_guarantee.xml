@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="35dp"
+        android:background="@drawable/cqd_borrowing_details_bg_nodata" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:text="您的借条暂时没有好友担保，投资人需要有担保人给你担保，是否立即邀请好友为你担保?"
+        android:textColor="@color/text_color_33gray"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/button_guarantee_friend"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/backgroud_bg_red_corner"
+        android:text="立即邀请"
+        android:textColor="@color/text_color_white"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button_cancel_guarantee"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/backgroud_bg_gray_corner"
+        android:text="稍后再说"
+        android:textColor="@color/text_color_66gray"
+        android:textSize="16sp" />
+</LinearLayout>

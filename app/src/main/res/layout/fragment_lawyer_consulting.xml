@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.youjie.android.view.MyScrollView
+        android:id="@+id/myscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="12dp"
+                android:text="快速提问实时匹配在线律师"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_super_big"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="240dp"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="超过128983名专业的律师精英来电解答"
+                android:textColor="@color/text_color_99gray"
+                android:textSize="@dimen/text_size_small" />
+
+
+            <com.tmall.ultraviewpager.UltraViewPager
+                android:id="@+id/laywer_ultraviewpager"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/framlayout_lawyer"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/colorPrimary"></FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="30dp"
+                android:text="律师回电咨询流程"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:src="@drawable/cqd_counseling_process" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:text="案情描述"
+                        android:textColor="@color/text_color_99gray"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="支付赏金"
+                        android:textColor="@color/text_color_99gray"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="律师来电"
+                        android:textColor="@color/text_color_99gray"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="18dp"
+                android:text="1.请输入简短案情描述"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_middle" />
+
+            <EditText
+                android:id="@+id/editext_depict"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="top"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttom_bg_shape"
+                android:gravity="top"
+                android:hint="输入案情描述"
+                android:padding="7dp"
+                android:textSize="@dimen/text_size_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机\n号码"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <EditText
+                    android:id="@+id/edittext_phone_num_consulting"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttom_bg_shape"
+                    android:hint="请输入你的手机号码，等待律师回电"
+                    android:inputType="numberSigned"
+                    android:padding="3dp"
+                    android:singleLine="true"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/imageview_showdialog"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/cqd_counseling_icon_prompt" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="20dp"
+                android:text="2.支付赏金快速匹配在线律师"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp">
+
+                <TextView
+                    android:id="@+id/textview_rmb_small"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgroud_bg_lawyer_selector"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="最全匹配\n¥48"
+                    android:textColor="@drawable/text_selector_red_white"
+                    android:textSize="@dimen/text_size_big" />
+
+                <TextView
+                    android:id="@+id/textview_rmb_middle"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgroud_bg_lawyer_selector"
+                    android:gravity="center"
+                    android:text="最多人选\n¥78"
+                    android:textColor="@drawable/text_selector_red_white"
+                    android:textSize="@dimen/text_size_big" />
+
+                <TextView
+                    android:id="@+id/textview_rmb_more"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgroud_bg_lawyer_selector"
+                    android:gravity="center"
+                    android:text="最快应答\n¥108"
+                    android:textColor="@drawable/text_selector_red_white"
+                    android:textSize="@dimen/text_size_big" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_initiate_consultation"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/backgroud_bg_red_corner"
+                android:gravity="center"
+                android:text="发起咨询，等待律师来电"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/text_size_big" />
+        </LinearLayout>
+    </com.youjie.android.view.MyScrollView>
+
+</LinearLayout>

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativelayout_iou_create"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_gray"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_title"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bg_gray"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_gray">
+
+                <View
+                    android:id="@+id/view_iou"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/bg_gray"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="2dp">
+
+                        <LinearLayout
+                            android:id="@+id/lineaylayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/text_color_white"
+                            android:orientation="horizontal"
+                            android:paddingTop="20dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="right">
+
+                                    <TextView
+                                        android:id="@+id/textview_borrow_amount_value"
+                                        style="@style/IOUValueStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:hint="0"
+                                        android:inputType="numberSigned"
+                                        android:maxLength="9"
+                                        android:numeric="integer"
+                                        android:paddingLeft="10dp"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/borrow_amount_label"
+                                        style="@style/IOULabelStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:text="@string/borrow_amount" />
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:id="@+id/start_date_label"
+                                    style="@style/IOULabelStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:text="@string/start_date" />
+
+                                <TextView
+                                    android:id="@+id/due_date_label"
+                                    style="@style/IOULabelStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:text="@string/due_date" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="right"
+                                    android:orientation="horizontal">
+
+
+                                    <ImageView
+                                        android:id="@+id/imageview_iou_interest_remind"
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/cqd_borrowing_details_icon_prompt"
+                                        android:clickable="true"
+                                        android:padding="5dp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/year_interest_label"
+                                        style="@style/IOULabelStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:text="@string/year_interest" />
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:id="@+id/total_principal_interest_label"
+                                    style="@style/IOULabelStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:text="@string/total_principal_interest" />
+
+                                <TextView
+                                    style="@style/IOULabelStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:text="借款用途:" />
+
+                                <TextView
+                                    style="@style/IOULabelStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:text="本人签字:" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="2"
+                                android:gravity="left"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/borrow_amount_value"
+                                    style="@style/IOUValueStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/input_bg"
+                                    android:gravity="center"
+                                    android:hint="请输入借款金额"
+                                    android:inputType="numberSigned"
+                                    android:maxLength="9"
+                                    android:numeric="integer" />
+
+
+                                <TextView
+                                    android:id="@+id/start_date_value"
+                                    style="@style/IOUValueStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/input_bg"
+                                    android:clickable="true"
+                                    android:gravity="center"
+                                    android:hint="@string/date_hint" />
+
+                                <TextView
+                                    android:id="@+id/due_date_value"
+                                    style="@style/IOUValueStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/input_bg"
+                                    android:clickable="true"
+                                    android:gravity="center"
+                                    android:hint="@string/date2_hint" />
+
+                                <LinearLayout
+                                    android:id="@+id/year_interest_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="right"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/textview_year_interest_value"
+                                        style="@style/IOUValueStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:hint="0-99"
+                                        android:inputType="numberDecimal"
+                                        android:maxLength="5"
+                                        android:paddingLeft="10dp"
+                                        android:visibility="gone" />
+
+                                    <EditText
+                                        android:id="@+id/year_interest_value"
+                                        style="@style/IOUValueStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/input_bg"
+                                        android:gravity="center"
+                                        android:hint="0-24"
+                                        android:inputType="number"
+                                        android:maxLength="5"
+                                        android:paddingLeft="10dp" />
+
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:id="@+id/total_principal_interest_value"
+                                    style="@style/IOUValueRedStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:text="¥0.00"
+                                    android:textSize="@dimen/text_size_super_big"
+                                    android:textStyle="bold" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/lineaylayout_iou_purpose"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/textview_iou_use_purpose"
+                                        style="@style/IOUValueStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:gravity="center"
+                                        android:text="应急周转" />
+
+                                    <TextView
+                                        android:id="@+id/textview_iou_use_purpose_more"
+                                        style="@style/IOUValueStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:gravity="center"
+                                        android:paddingLeft="10dp"
+                                        android:text="更多>"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="@dimen/text_size_big" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/signature_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/textview_click_sign"
+                                        style="@style/IOUValueStyle"
+                                        android:layout_width="90dp"
+                                        android:layout_height="25dp"
+                                        android:background="@drawable/backgroud_bg_red_corner_2dp"
+                                        android:gravity="center"
+                                        android:text="点击签名"
+                                        android:textColor="@color/text_color_white"
+                                        android:textSize="13sp" />
+
+                                    <ImageView
+                                        android:id="@+id/imageview_iou_send_signature"
+                                        android:layout_width="100dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center"
+                                        android:scaleType="fitStart"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="45dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/IOULabelStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:gravity="left|center_vertical"
+                                    android:text="元"
+                                    android:textSize="@dimen/text_size_big" />
+
+                                <ImageView
+                                    android:id="@+id/imageview_borrow_data"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:gravity="left|center_vertical"
+                                    android:padding="5dp"
+                                    android:src="@drawable/cqd_borrowing_details_icon_date" />
+
+                                <ImageView
+                                    android:id="@+id/imageview_lender_data"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:gravity="left|center_vertical"
+                                    android:padding="5dp"
+                                    android:src="@drawable/cqd_borrowing_details_icon_date" />
+
+                                <TextView
+                                    android:id="@+id/textview_iou_percent"
+                                    style="@style/IOULabelStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:drawablePadding="8dp"
+                                    android:gravity="left|center_vertical"
+                                    android:text="%"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/text_color_white"
+                            android:gravity="center"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/textview_iou_hint"
+                                style="@style/IOUValueRedStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/cqd_borrowing_icon_hint"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="请将内容填写全后，再进行下一步操作"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_iou_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_create_iou"
+                            style="@style/MyMiniCheckBox"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:checked="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="已阅读并同意"
+                            android:textSize="13sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textview_relevant_agreement"
+                                style="@style/IOUValueRedStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoLink="all"
+                                android:text="相关协议"
+                                android:textSize="13sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorPrimary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="并查看"
+                            android:textSize="13sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textview_laywer_text"
+                                style="@style/IOUValueRedStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoLink="all"
+                                android:text="法律文本"
+                                android:textSize="13sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorPrimary" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_gray"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/one_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/red_button_shape"
+            android:text="提交"
+            android:textColor="@color/text_color_white"
+            android:textSize="16sp"
+            android:visibility="visible" />
+    </LinearLayout>
+</RelativeLayout>

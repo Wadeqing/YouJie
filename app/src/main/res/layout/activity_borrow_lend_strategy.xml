@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginBottom="30dp"
+        android:id="@+id/button_start_borrow_money"
+        style="@style/MyButton"
+        android:text="点击开启你的好友贷款之旅" />
+
+</LinearLayout>

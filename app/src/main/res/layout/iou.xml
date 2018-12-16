@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/text_color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/textview_borrow_amount_value"
+                    style="@style/IOUValueStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:inputType="numberSigned"
+                    android:maxLength="9"
+                    android:numeric="integer"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/borrow_amount_label"
+                    style="@style/IOULabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/borrow_amount" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/start_date_label"
+                style="@style/IOULabelStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/start_date" />
+
+            <TextView
+                android:id="@+id/due_date_label"
+                style="@style/IOULabelStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/due_date" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+
+
+                <ImageView
+                    android:id="@+id/imageview_iou_interest_remind"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/year_interest_label"
+                    style="@style/IOULabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/year_interest" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/total_principal_interest_label"
+                style="@style/IOULabelStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/total_principal_interest" />
+
+            <TextView
+                style="@style/IOULabelStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="借款用途:" />
+            <TextView
+                style="@style/IOULabelStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="本人签字:" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/borrow_amount_value"
+                style="@style/IOUValueStyle"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_bg"
+                android:gravity="center"
+                android:hint="请填写借款金额数"
+                android:inputType="numberSigned"
+                android:maxLength="9"
+                android:numeric="integer" />
+
+
+            <TextView
+                android:id="@+id/start_date_value"
+                style="@style/IOUValueStyle"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/input_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:hint="@string/date_hint" />
+
+            <TextView
+                android:id="@+id/due_date_value"
+                style="@style/IOUValueStyle"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:hint="@string/date2_hint" />
+
+            <LinearLayout
+                android:id="@+id/year_interest_container"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_year_interest_value"
+                    style="@style/IOUValueStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="0-99"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/year_interest_value"
+                    style="@style/IOUValueStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg"
+                    android:gravity="center"
+                    android:hint="0-99"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:paddingLeft="10dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/total_principal_interest_value"
+                style="@style/IOUValueRedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="¥00.00" />
+            <TextView
+                android:id="@+id/textview_iou_use_purpose"
+                style="@style/IOUValueStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="紧急周转" />
+
+            <LinearLayout
+                android:id="@+id/signature_container"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_click_sign"
+                    style="@style/IOUValueStyle"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp"
+                    android:textColor="@color/text_color_white"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="点击签名" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="元" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:padding="5dp"
+                 />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:padding="5dp"
+                 />
+
+            <TextView
+                android:id="@+id/textview_iou_percent"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="%" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary">
+
+        <FrameLayout
+            android:id="@+id/imageview_title_left"
+            android:layout_width="45dp"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:layout_width="9dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/cqd_borrowing_icon_back"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="电话咨询"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/text_size_super_big" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_gravity="bottom"
+            android:background="@color/text_color_ccgray" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayout_lawyer_consulting"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_bottom_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/textview_phone_consulting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttom_bg_shape"
+            android:gravity="center"
+            android:text="电话咨询"
+            android:textColor="@drawable/text_red_black_selector"
+            android:textSize="@dimen/text_size_super_big" />
+
+        <TextView
+            android:id="@+id/textview_me_consulting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttom_bg_shape"
+            android:gravity="center"
+            android:text="我的咨询"
+            android:textColor="@drawable/text_red_black_selector"
+            android:textSize="@dimen/text_size_super_big" />
+
+    </LinearLayout>
+</LinearLayout>

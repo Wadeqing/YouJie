@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_history_circle_first" />
+
+        <View
+            android:id="@+id/view_history_first_item_line"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/line_gray"></View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/textview_history_list_first_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="张三确认收款"
+            android:textColor="@color/text_color_green"
+            android:textSize="@dimen/text_size_middle" />
+
+        <TextView
+            android:id="@+id/textview_history_list_first_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="2015-04-11    11:00"
+            android:textColor="@color/text_color_green"
+            android:textSize="@dimen/text_size_small" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_gray"></View>
+    </LinearLayout>
+
+</LinearLayout>

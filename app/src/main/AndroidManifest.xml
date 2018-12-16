@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.youjie.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+
+    <!-- umeng 需要的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!-- 极光推送 -->
+    <!-- 极光推送Required -->
+    <permission
+        android:name="com.youjie.android.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.youjie.android.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- since 1.6.0 -->
+    <!-- 极光推送Optional. Required for location feature -->
+
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+
+    <!-- 监听home键 -->
+    <!-- <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/> -->
+
+    <uses-permission android:name="android.permission.f" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature android:name="android.hardware.nfc.hce" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+
+    <!-- 集成客服加 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name="com.youjie.android.YouJieApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <!--<provider
+            android:name=".DictContentProvider"
+            android:authorities="com.youdao.provider.dict"
+            android:exported="true" />-->
+
+        <!-- 客服加 -->
+        <meta-data
+            android:name="SERVICEFORCE_APPKEY"
+            android:value="FYZlmXp0A3Bsq1441770501780" />
+        <meta-data
+            android:name="SERVICEFORCE_APPSECRET"
+            android:value="1c4ad84417cf76887a506f9ff2c7b605" />
+
+        <!-- Required -->
+        <!--    <service
+                android:name="cn.jpush.android.service.PushService"
+                android:enabled="true"
+                android:exported="false">
+                <intent-filter>
+                    <action android:name="cn.jpush.android.intent.REGISTER" />
+                    <action android:name="cn.jpush.android.intent.REPORT" />
+                    <action android:name="cn.jpush.android.intent.PushService" />
+                    <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+                </intent-filter>
+            </service>-->
+
+        <!-- 极光推送开始Required -->
+        <!-- Required -->
+        <!-- <receiver
+             android:name="cn.jpush.android.service.PushReceiver"
+             android:enabled="true">
+             <intent-filter android:priority="1000"> &lt;!&ndash; since 1.3.5 &ndash;&gt;
+                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                 &lt;!&ndash; since 1.3.5 &ndash;&gt;
+                 <category android:name="com.youjie.android" />
+                 &lt;!&ndash; since 1.3.5 &ndash;&gt;
+             </intent-filter>
+             &lt;!&ndash; since 1.3.5 &ndash;&gt;
+             <intent-filter>
+                 <action android:name="android.intent.action.USER_PRESENT" />
+                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="android.intent.action.PACKAGE_ADDED" />
+                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                 <data android:scheme="package" />
+             </intent-filter>
+         </receiver>-->
+
+
+        <!-- Required SDK核心功能 -->
+        <!-- <activity
+             android:name="cn.jpush.android.ui.PushActivity"
+             android:configChanges="orientation|keyboardHidden"
+             android:theme="@android:style/Theme.Translucent.NoTitleBar">
+             <intent-filter>
+                 <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <category android:name="com.youjie.android" />
+             </intent-filter>
+         </activity>-->
+
+        <!-- Required SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!--&lt;!&ndash; Required SDK核心功能 &ndash;&gt;-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- <meta-data
+             android:name="JPUSH_CHANNEL"
+             android:value="developer-default" />
+         &lt;!&ndash;&lt;!&ndash; Required. AppKey copied from Portal &ndash;&gt;
+         <meta-data
+             android:name="JPUSH_APPKEY"
+             android:value="c99eaa5eb73b5159c81e1104" />
+
+         &ndash;&gt;-->
+        <!-- 极光推送结束Required -->
+        <receiver
+            android:name="com.youjie.android.MyPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+
+                <category android:name="com.youjie.android" />
+            </intent-filter>
+        </receiver>
+        <!-- 友盟自动更新 -->
+        <!-- Update Activitys Start -->
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--注册和修改密码使用-->
+        <activity
+            android:name="com.youjie.android.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+
+        <!-- 友盟意见反馈 -->
+        <!--<activity android:name="com.umeng.fb.ConversationActivity" />-->
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="55501e9de0f55acdfb005fdc" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <activity
+            android:name="com.youjie.android.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="youjieapp" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--银联支付-->
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false" />
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.youjie.android.activity.LoadingViewpagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name="com.youjie.android.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme">
+            <!-- &lt;!&ndash;通过浏览器Url启动app&ndash;&gt;
+             <intent-filter>
+                 <action android:name="android.intent.action.VIEW" />
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <category android:name="android.intent.category.BROWSABLE" />
+                 <data
+                     android:host="zhongtong"
+                     android:scheme="youjie.sinocall" />
+                 &lt;!&ndash;<a href="[scheme]://[host]/[path]?[query]">启动应用程序</a>&ndash;&gt;
+             </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name="com.youjie.android.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.youjie.android.activity.AuthSep1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.youjie.android.activity.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.SysSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.InvitaGuaranteeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.LawyerConsultingAvtivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!--裁剪图片-->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name="com.youjie.android.activity.IOUActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.MessageDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.NotaryAvtivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.GestureSetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.GestureVerifyActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+
+        <activity
+            android:name="com.youjie.android.activity.IOUItemListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+
+        <activity
+            android:name="com.youjie.android.activity.QuickBorrowMoneyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.IOUDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.LegelServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.youjie.android.activity.PreferentialActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.youjie.android.activity.SignatureActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+        <!-- 友盟 -->
+        <!--QQ-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104674539" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--微信回调-->
+        <activity
+            android:name="com.youjie.android.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--客服机器人-->
+        <activity
+            android:name="cn.serviceforce.cssdk.activity.ServiceForceFAQDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="cn.serviceforce.cssdk.activity.ServiceForceFAQNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="cn.serviceforce.cssdk.activity.ServiceForceFAQSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateAlwaysVisible" />
+        <activity
+            android:name="cn.serviceforce.cssdk.activity.ServiceForceFAQResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="cn.serviceforce.cssdk.activity.ServiceForceContactUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="cn.serviceforce.cssdk.activity.ServiceForceChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="cn.serviceforce.cssdk.activity.ServiceforceWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.AuthSep1SuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.MeMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+
+        <activity
+            android:name="com.youjie.android.activity.UserCentralityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BalanceTheme" />
+
+        <activity
+            android:name="com.youjie.android.activity.BorrowingPurposesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.CreditEmpowerListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.CreditEmpowerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.IOUItemListLenderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.AllFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.youjie.android.activity.BindBankCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!--我的余额页面-->
+        <activity
+            android:name="com.youjie.android.activity.YouJieMyBalanceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BalanceTheme" />
+        <!--设置支付密码-->
+        <activity android:name="com.youjie.android.activity.YouJieSetPasswordActivity" />
+        <!--修改登录密码-->
+        <activity android:name="com.youjie.android.activity.YouJieResetPasswordActivity" />
+        <!--修改交易密码-->
+        <activity android:name="com.youjie.android.activity.YouJieResetPayPasswordActivity" />
+        <!--充值或者提现-->
+        <activity android:name="com.youjie.android.activity.YouJieSaveOrTakeMoneyActivity" />
+        <!--卡详情-->
+        <activity android:name="com.youjie.android.activity.YouJieCardDetailsActivity" />
+        <!--解除银行卡-->
+        <activity android:name="com.youjie.android.activity.YouJieRemoveCardActivity" />
+        <!--充值成功-->
+        <activity android:name="com.youjie.android.activity.YouJiePaySuccessActivity" />
+        <!--绑定银行卡第二步-->
+        <activity android:name="com.youjie.android.activity.BindBankCardTwoActivity" />
+        <!--  交易明细-->
+        <activity
+            android:name="com.youjie.android.activity.YouJieBusinessListActivity"
+            android:theme="@style/AppTheme" />
+        <!--交易详情-->
+        <activity
+            android:name="com.youjie.android.activity.YouJieBusinessDetailActivity"
+            android:theme="@style/AppTheme" />
+        <!--  绑定银行卡成功-->
+        <activity
+            android:name="com.youjie.android.activity.BindBankCardSuccessActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.youjie.android.activity.BorrowLendStrategyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.BorrowLendManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+
+        <activity
+            android:name="com.youjie.android.activity.ApixCreditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.CreditSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.IOUDetailLenderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.youjie.android.activity.IOUCreateDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.MeIOULaunchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.ImageViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.IOUItemListGuarateeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.IOUDetailGuaranteeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.CommonFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.youjie.android.activity.SysMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.FriendApplyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.PublishSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.RegisteSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.youjie.android.activity.AddFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.IOULockMoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.IOUOnlyDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.youjie.android.activity.FriendDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BalanceTheme" />
+        <activity
+            android:name="com.youjie.android.activity.SearchFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- -->
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <!-- YOUR_PACKAGE_PATH.CustomPushReceiver需要改为自己的Receiver： -->
+        <receiver
+            android:name="com.youjie.android.TencentMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.youjie.android.ServiceSynchContract" />
+
+        <service android:name="ContacterSyncService" />
+
+        <meta-data
+            android:name="com.youjie.android.view.GlideConfiguration"
+            android:value="GlideModule" />
+    </application>
+
+</manifest>

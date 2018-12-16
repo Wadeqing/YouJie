@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_eegray"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <RelativeLayout
+        android:background="@color/text_color_eegray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.youjie.android.pulltorefresh.PullToRefreshListView
+            android:id="@+id/listview_credit_empower"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/text_color_white">
+
+        </com.youjie.android.pulltorefresh.PullToRefreshListView>
+
+        <TextView
+            android:id="@+id/textview_no_friend_look"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/text_color_gray"
+            android:textSize="@dimen/text_size_big"
+            android:text="暂无好友查看征信" />
+    </RelativeLayout>
+</LinearLayout>

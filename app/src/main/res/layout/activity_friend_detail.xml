@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lineaylayout_friend_detail_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_eegray"
+    android:orientation="vertical"
+    android:visibility="gone">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/freind_detail_heigh"
+        android:layout_gravity="center"
+        android:background="@drawable/cqd_contact_data_bg"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/status_tar_heigh">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="好友资料"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/text_size_super_big" />
+
+            <TextView
+                android:id="@+id/textview_friend_detail_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="关闭"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/text_size_middle_s" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageview_friend_detail_portrait"
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/cqd_contact_icon_portrait_default" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textview_friend_detial_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_super_big" />
+
+                <TextView
+                    android:id="@+id/textview_phone_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/text_color_66gray"
+                    android:textIsSelectable="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview_user_identy"
+                        android:layout_width="28dp"
+                        android:layout_height="14dp"
+                        android:background="@drawable/backgroud_bg_selector"
+                        android:gravity="center"
+                        android:text="实名"
+                        android:textColor="@drawable/text_red_selector"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/textview_user_identy_credit"
+                        android:layout_width="28dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/backgroud_bg_selector"
+                        android:gravity="center"
+                        android:text="征信"
+                        android:textColor="@drawable/text_red_selector"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/textview_user_identy_card"
+                        android:layout_width="38dp"
+                        android:layout_height="14dp"
+                        android:background="@drawable/backgroud_bg_selector"
+                        android:gravity="center"
+                        android:text="银行卡"
+                        android:textColor="@drawable/text_red_selector"
+                        android:textSize="8sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/textview_friend_detail_mutual"
+                    android:layout_width="66dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/backgroud_friend_red_corner"
+                    android:drawableLeft="@drawable/cqd_contact_icon_mutual"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="6dp"
+                    android:text="互相关注"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textview_friend_detail_finish_add_friend"
+                    android:layout_width="66dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/backgroud_friend_green_corner"
+                    android:drawableLeft="@drawable/cqd_contact_icon_right"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="6dp"
+                    android:text="已添加"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textview_friend_detail_add_friend"
+                    android:layout_width="66dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/backgroud_friend_blue_corner"
+                    android:drawableLeft="@drawable/cqd_contact_icon_addfriend"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="6dp"
+                    android:text="添加好友"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageview_friend_relation_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textview_friend_relation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已添加" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/text_color_white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="借贷关系"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_big" />
+
+                <TextView
+                    android:id="@+id/textview_friend_borrowlend_relation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_66gray"
+                    android:textSize="@dimen/text_size_big" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/text_color_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="基本信息"
+                android:textColor="@color/text_color_66gray"
+                android:textSize="@dimen/text_size_middle_s" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/text_color_white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="手机号码"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_big" />
+
+                <TextView
+                    android:id="@+id/textview_friend_detail_phone_num_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_66gray"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/text_size_big" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/text_color_white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="好友来源"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_big" />
+
+                <TextView
+                    android:id="@+id/textview_friend_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_66gray"
+                    android:textSize="@dimen/text_size_big" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/text_color_white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="注册时间"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_big" />
+
+                <TextView
+                    android:id="@+id/textview_friend_register_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_66gray"
+                    android:textSize="@dimen/text_size_big" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_guarantee_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/lineaylayout_friend_lock_credit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/text_color_white"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="查看征信"
+                        android:textColor="@color/text_color_33gray"
+                        android:textSize="@dimen/text_size_big" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/cqd_contact_icon_right_gray"
+                        android:text="点击查看好友征信报告"
+                        android:textColor="@color/text_color_66gray"
+                        android:textSize="@dimen/text_size_big" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/text_color_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="向TA发起"
+                    android:textColor="@color/text_color_66gray"
+                    android:textSize="@dimen/text_size_middle_s" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/text_color_white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/textview_friend_borrow_money"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@color/text_color_white"
+                        android:gravity="center_vertical"
+                        android:text="向TA借款"
+                        android:textColor="@color/text_color_33gray"
+                        android:textSize="@dimen/text_size_big" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/cqd_contact_icon_right_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/text_color_white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textview_friend_invite_guarantee"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@color/text_color_white"
+                        android:gravity="center_vertical"
+                        android:text="邀请担保"
+                        android:textColor="@color/text_color_33gray"
+                        android:textSize="@dimen/text_size_big" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/cqd_contact_icon_right_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/text_color_white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textview_friend_call_recording"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@color/text_color_white"
+                        android:gravity="center_vertical"
+                        android:text="通话录音"
+                        android:textColor="@color/text_color_33gray"
+                        android:textSize="@dimen/text_size_big" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/cqd_contact_icon_right_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/text_color_white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/textview_friend_dun"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@color/text_color_white"
+                        android:gravity="center_vertical"
+                        android:text="催TA还钱"
+                        android:textColor="@color/text_color_33gray"
+                        android:textSize="@dimen/text_size_big" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/cqd_contact_icon_right_gray" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/lineaylayout_bottom_hrge_guarrante"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/text_color_white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textview_friend_detail_bottom_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:drawableLeft="@drawable/cqd_borrowing_details_icon_replace"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:text="换个担保人"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_big"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.tencent.mid:mid-3.72.4-alpha">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/mid-3.72.4-alpha.aar/59df1ca4b7a4f2ae2696be651a321912/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/mid-3.72.4-alpha.aar/59df1ca4b7a4f2ae2696be651a321912/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/mid-3.72.4-alpha.aar/59df1ca4b7a4f2ae2696be651a321912/jars/libs/mid-core-sdk-3.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tencent.mid/mid/3.72.4-alpha/eeb4ddc74b37e9d4e9fa4899577d85803c967365/mid-3.72.4-alpha-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

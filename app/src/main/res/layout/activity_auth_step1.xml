@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_eegray"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title"></include>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <include layout="@layout/devide_title" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="47dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="20dp">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+
+                            android:src="@drawable/cqd_borrowing_details_icon_prompt" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="@string/auth_setp1_tip1"
+                            android:textColor="@color/text_color_33gray"
+                            android:textSize="@dimen/text_size_middle_s" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="58dp"
+                        android:background="@color/text_color_white"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="姓名"
+                            android:textColor="@color/text_color_33gray"
+                            android:textSize="@dimen/text_size_big" />
+
+                        <EditText
+                            android:id="@+id/edittext_auth_step1_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="45dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="@string/name_input_hint"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_33gray"
+                            android:textSize="@dimen/text_size_big" />
+                        <!--android:background="@drawable/bg_edittext"-->
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/text_color_ccgray" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="58dp"
+                        android:background="@color/text_color_white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="13dp"
+                            android:text="证件类型"
+                            android:textColor="@color/text_color_33gray"
+                            android:textSize="@dimen/text_size_big" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="身份证"
+                            android:textColor="@color/text_color_33gray"
+                            android:textSize="@dimen/text_size_big" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/text_color_ccgray" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="58dp"
+                        android:background="@color/text_color_white"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="13dp"
+                            android:text="证件号    "
+                            android:textColor="@color/text_color_33gray"
+                            android:textSize="@dimen/text_size_big" />
+
+                        <EditText
+                            android:id="@+id/edittext_auth_step1_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:hint="请输入证件号码"
+                            android:maxLength="18"
+                            android:background="@null"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_33gray"
+                            android:textSize="@dimen/text_size_big" />
+                        <!--android:background="@drawable/bg_edittext"-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="40dp"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="认证须知:"
+                            android:textColor="@color/text_color_33gray"
+                            android:textSize="@dimen/text_size_big" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="1、请使用二代身份证，身份证号为18位"
+                            android:textColor="@color/text_color_33gray"
+                            android:textSize="@dimen/text_size_big" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="2、同一身份证只能认证一次"
+                            android:textColor="@color/text_color_33gray"
+                            android:textSize="@dimen/text_size_big" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+            <Button
+                android:id="@+id/button_auth_setp1_next"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/backgroud_bg_red_corner"
+                android:padding="10dp"
+                android:text="@string/auth_next_step"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_big" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_auth_step1_hind_input"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+    </FrameLayout>
+</LinearLayout>

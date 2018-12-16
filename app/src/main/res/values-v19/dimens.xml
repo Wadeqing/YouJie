@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_margin">10dp</dimen>
+    <dimen name="mybalance_bg_heigh">266dp</dimen>
+    <dimen name="status_tar_heigh">22dp</dimen>
+    <dimen name="actionBar">66dp</dimen>
+    <dimen name="freind_detail_heigh">170dp</dimen>
+
+    <dimen name="bindcard_success">232dp</dimen>
+    <dimen name="user_centrality_bg">178dp</dimen>
+</resources>

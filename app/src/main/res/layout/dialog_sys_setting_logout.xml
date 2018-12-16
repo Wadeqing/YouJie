@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_transparent_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview_dialog_utils_top"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="友借"
+        android:textColor="@color/text_color_red"
+        android:textSize="@dimen/text_size_big" />
+
+    <View
+        android:layout_width="230dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="@color/text_color_ccgray" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/textview_dialog_util_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/sys_setting_dialog_logout"
+        android:textColor="@color/text_color_33gray"
+        android:textSize="@dimen/text_size_middle_s" />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/button_dialog_logout_cancel"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/backgroud_bg_gray_dialog_corner"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/sys_setting_dialog_cancel"
+            android:textColor="@color/text_color_66gray"
+            android:textSize="@dimen/text_size_middle_s" />
+
+        <TextView
+            android:id="@+id/button_dialog_logout_sure"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/backgroud_bg_red_corner"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/sys_setting_dialog_sure"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/text_size_middle_s" />
+    </LinearLayout>
+</LinearLayout>

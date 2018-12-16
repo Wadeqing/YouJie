@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/radiobutton_gridview"
+        android:layout_width="74dp"
+        android:layout_height="28dp"
+        android:background="@drawable/backgroud_check_red_white_selector"
+        android:gravity="center"
+        android:text="应急周转"
+        android:textColor="@drawable/text_check_black_white_selector"
+        android:textSize="@dimen/text_size_middle_s" />
+</LinearLayout>

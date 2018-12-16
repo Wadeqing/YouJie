@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="windowBackground">#e6e6e6</drawable>
+    <drawable name="actionbar_background">#363636</drawable>
+
+    <color name="colorAccent">#111111</color>
+    <color name="colorPrimary">#ff9900</color>
+    <color name="colorPrimaryDark">#666666</color>
+    <color name="primary">#ff9900</color>
+    <color name="status_bar_color">@color/colorPrimary</color>
+    <color name="color00">#000000</color>
+    <color name="color66tran">#66000000</color>
+
+    <color name="bg_green">#82BD03</color>
+    <color name="colorPrimaryBg">#fff7e9</color>
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_color_33gray">#333333</color>
+    <color name="text_color_66gray">#666666</color>
+    <color name="text_color_99gray">#999999</color>
+    <color name="text_color_fb">#fbfbfb</color>
+
+    <color name="text_color_ccgray">#cccccc</color>
+    <color name="text_color_eegray">#eeeeee</color>
+    <color name="text_color_f5gray">#f5f5f5</color>
+    <color name="text_color_fagray">#fafafa</color>
+    <!--<color name="text_color_red">#dd3d43</color>-->
+    <color name="text_color_red">@color/colorPrimary</color>
+    <color name="text_color_gay">#c7d7bd</color>
+    <color name="text_color_green">#70b209</color>
+    <color name="addfriend_agree">#2dc0fe</color>
+    <color name="text_color_green_shen">#008800</color>
+    <color name="text_color_gray">#B7B7B7</color>
+    <color name="text_color_black">#000000</color>
+    <color name="line_gray">#CCCCCC</color>
+    <color name="text_color_green_dialog">#82BD03</color>
+    <color name="text_color_white_dialog">#ffffff</color>
+    <color name="bg_color_red_dialog">#cc3300</color>
+    <color name="gesture_green_line">#81BC03</color>
+    <color name="bg_auth_top_gray">#C0C0C0</color>
+    <color name="bg_devide">#999999</color>
+    <color name="text_gray">#999999</color>
+    <color name="bg_gray">#f2f2f2</color>
+    <color name="bg_friend_red">#dd3d43</color>
+    <color name="bg_friend_green">#1abc9c</color>
+    <color name="bg_friend_blue">#3499da</color>
+    <color name="backgroud_gray">#eeeeee</color>
+    <color name="backgroud_yellow">#f7c27b</color>
+    <color name="backgroud_yellow_shen">#f29923</color>
+    <color name="bg_red">#f00</color>
+    <color name="bg_red_shen">#ff3300</color>
+    <color name="bg_red_shenhong">#A92D01</color>
+    <color name="text_color_record_head_gray_darker">#cccccc</color>
+    <color name="text_color_record_detail_gray_darker">#4C5D67</color>
+    <color name="text_color_record_detail_status_lighter">#585E4C</color>
+    <color name="bg_green_record_list_head">#81BC03</color>
+    <color name="bg_gray_record_list_head">#DDDEDB</color>
+    <color name="bg_iou_detail_gray">#F3F3F3</color>
+    <color name="bg_iou_detail_status_green">#81BD03</color>
+    <color name="bg_interest_remind">#cc4a4a4a</color><!--cc是80%的透明度-->
+    <color name="title_black_bg">#ffffff</color>
+    <color name="title_transparent_bg">#00000000</color>
+    <color name="bg_sys_setting_gray">#f2f2f2</color>
+    <color name="main_gray_line">#D9D9D9</color>
+    <color name="bg_iou_detail_status_yellow">#f5cb07</color>
+    <color name="bg_iou_detail_status_red">#ff4444</color>
+
+    <color name="text_arg_repay_gray">#999999</color>
+    <color name="text_arg_repay_green">#82BE06</color>
+    <color name="text_arg_repay_red">#FF4444</color>
+    <color name="view_divided">#bcbcbc</color>
+
+    <color name="text_logout_gray">#a3a3a3</color>
+    <color name="text_transparent">#00000000</color>
+</resources>

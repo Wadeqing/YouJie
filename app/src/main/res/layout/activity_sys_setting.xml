@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroud_gray"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_title"></include>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="账户安全设置"
+                android:textColor="@color/text_color_66gray" />
+
+            <!--<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/ripple_background"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_color_black"
+                    android:gravity="center_vertical"
+                    android:text="@string/sys_setting_gesture_password_switch"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <Button
+                    android:id="@+id/switch_button"
+                    android:layout_width="45dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/cqd_personal_settingup_btn_off" />
+            </LinearLayout>-->
+
+            <!--   <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/backgroud_gray" />
+
+               <LinearLayout
+                   android:id="@+id/linearlayout_sys_setting_set_gesture"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:paddingBottom="15dp"
+                   android:paddingTop="15dp">
+
+                   <TextView
+                       android:id="@+id/textview_sys_setting_set_gesture"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:text="@string/sys_setting_gesture_password_switch_set"
+                       android:textSize="@dimen/text_size_middle" />
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:paddingRight="5dp"
+                       android:src="@drawable/icon_arrow_modify_cannot" />
+               </LinearLayout>
+
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/backgroud_gray" />
+   -->
+
+            <LinearLayout
+                android:id="@+id/reset_login_password"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/ripple_background"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="修改登录密码"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/cqd_contact_icon_right_gray" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/backgroud_gray" />
+
+            <LinearLayout
+                android:id="@+id/reset_pay_password"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/ripple_background"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:id="@+id/textview_pay_pwd"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="修改交易密码"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/cqd_contact_icon_right_gray" />
+            </LinearLayout>
+
+
+            <!--  <View
+                  android:layout_width="fill_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/backgroud_gray" />
+
+              <LinearLayout
+                  android:id="@+id/linearlayout_sys_setting_modify_gesture"
+                  android:layout_width="fill_parent"
+                  android:layout_height="50dp"
+                  android:background="@drawable/ripple_background"
+                  android:orientation="horizontal"
+                  android:paddingLeft="15dp">
+
+                  <TextView
+                      android:id="@+id/textview_sys_setting_modify_gesture"
+                      android:layout_width="0dp"
+                      android:layout_height="fill_parent"
+                      android:layout_weight="1"
+                      android:gravity="center|left"
+                      android:text="@string/sys_setting_gesture_password_switch_modify"
+                      android:textSize="@dimen/text_size_middle" />
+
+                  <ImageView
+                      android:id="@+id/imageview_sys_setting_modify_in"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_marginRight="15dp"
+                      android:src="@drawable/cqd_contact_icon_right_gray" />
+              </LinearLayout>-->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="帮助与反馈"
+                android:textColor="@color/text_color_66gray" />
+
+            <LinearLayout
+                android:id="@+id/setting_question_linear"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/ripple_background"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="常见问题"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/cqd_contact_icon_right_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/backgroud_gray" />
+
+            <LinearLayout
+                android:id="@+id/setting_purging_cached"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/ripple_background"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="清理缓存"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/cqd_contact_icon_right_gray" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sys_linear_loginout"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ripple_background"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退出登录"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_middle" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

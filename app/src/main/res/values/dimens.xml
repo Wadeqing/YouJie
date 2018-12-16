@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_small_s">10sp</dimen>
+    <dimen name="text_size_middle_s">13sp</dimen>
+    <dimen name="text_size_middle">14sp</dimen>
+    <dimen name="text_size_big">16sp</dimen>
+    <dimen name="id_row_height">40dp</dimen>
+    <dimen name="id_linearlayout_pading">30dp</dimen>
+    <dimen name="text_size_super_big">18sp</dimen>
+    <dimen name="text_size_23_sp">23sp</dimen>
+    <dimen name="text_size_dialog_top">23sp</dimen>
+    <dimen name="text_size_32">32px</dimen>
+    <dimen name="text_size_big18">18sp</dimen>
+    <dimen name="text_size_mid16">16sp</dimen>
+    <dimen name="text_size_sma9">9sp</dimen>
+    <dimen name="card_margin">0dp</dimen>
+    <dimen name="card_info_height">70dp</dimen>
+    <dimen name="mybalance_bg_heigh">244dp</dimen>
+    <dimen name="status_tar_heigh">0dp</dimen>
+    <dimen name="freind_detail_heigh">158dp</dimen>
+    <dimen name="bindcard_success">210dp</dimen>
+    <dimen name="actionBar">44dp</dimen>
+    <dimen name="user_centrality_bg">156dp</dimen>
+</resources>

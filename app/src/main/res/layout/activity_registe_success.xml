@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="155dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:background="@drawable/cqd_maybe_banner" />
+
+        <TextView
+            android:id="@+id/textview_jump"
+            android:layout_width="40dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/backgroud_bg_jump"
+            android:gravity="center"
+            android:text="跳过"
+            android:textColor="@color/text_color_white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f5f5">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_registe_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:background="@color/text_color_white"></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/textview_add_num"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="1dp"
+            android:background="@color/text_color_white"
+            android:gravity="center"
+            android:text="批量添加"
+            android:textColor="@color/primary"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.dialog.animator:animatordialog-1.0.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animatordialog-1.0.1.aar/22db08635c206547a200c938249748d3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animatordialog-1.0.1.aar/22db08635c206547a200c938249748d3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.dialog.animator/animatordialog/1.0.1/1061461a9809f6ffa48287b042d1ca22d9479fe6/animatordialog-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

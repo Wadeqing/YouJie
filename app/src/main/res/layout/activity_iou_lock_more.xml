@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/text_color_fagray"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="18dp"
+            android:gravity="center"
+            android:text="借款人"
+            android:textColor="@color/text_color_66gray"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="年利率"
+            android:textColor="@color/text_color_66gray"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="借款/用途"
+            android:textColor="@color/text_color_66gray"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <com.youjie.android.pulltorefresh.PullToRefreshListView
+        android:id="@+id/pulltorefresh_listview_home_iou"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.youjie.android.pulltorefresh.PullToRefreshListView>
+</LinearLayout>

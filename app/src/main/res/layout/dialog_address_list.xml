@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_transparent_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="选择发起"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_big" />
+
+        <ImageView
+            android:id="@+id/imageview_address_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="15dp"
+            android:src="@drawable/cqd_contact_icon_close_black" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_color_ccgray" />
+
+    <TextView
+        android:id="@+id/textview_address_borrower"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="向TA借钱"
+        android:textColor="@drawable/text_selector_red_black"
+        android:textSize="@dimen/text_size_big" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textview_address_dun"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="催他还钱"
+        android:textSize="@dimen/text_size_big" />
+
+</LinearLayout>

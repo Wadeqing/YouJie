@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout_dissmissdialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/dialog_transparent_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="提示"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_big" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_color_ccgray" />
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="为什么要输入手机号码？\n在线咨询要求您输入可实时方便接听的本机号码，其功能是为了方便在线接单律师能准确、快速的发起来电与您取得联系，并开始咨询沟通。"
+        android:textSize="@dimen/text_size_middle" />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="我的号码会不会被泄露？\n在此期间，您无需支付额外通讯费用，并且您的手机号码会被隐藏保护，不会发生信息泄露情况。"
+        android:textSize="@dimen/text_size_middle" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/backgroud_bg_red_corner"
+        android:gravity="center"
+        android:text="知道了"
+        android:textColor="@color/text_color_white" />
+
+</LinearLayout>

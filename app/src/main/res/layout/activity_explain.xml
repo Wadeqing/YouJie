@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/text_color_white"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="@dimen/text_size_super_big" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:lineSpacingExtra="10dp"
+            android:text="您可以向您的通讯录好友发起借钱、催债、电话口头借条录音、通话录音存证等功能，其中："
+            android:textColor="@color/text_color_33gray"
+            android:textSize="@dimen/text_size_middle_s" />
+
+        <TextView
+            android:id="@+id/textview_text_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="10dp"
+            android:text="1、向TA借钱——可向指定好友发起借贷请求"
+            android:textColor="@color/text_color_33gray"
+            android:textSize="@dimen/text_size_middle_s" />
+        <TextView
+            android:id="@+id/textview_text_content_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="10dp"
+            android:text="3、催TA还钱——给好友发送还款催收信息"
+            android:textColor="@color/text_color_33gray"
+            android:textSize="@dimen/text_size_middle_s" />
+    </LinearLayout>
+</LinearLayout>

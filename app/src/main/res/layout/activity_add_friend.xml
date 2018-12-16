@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_eegray"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/text_color_white">
+
+                <TextView
+                    android:id="@+id/edittext_addfriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/gray_btn_bg"
+                    android:drawableLeft="@drawable/cqd_contact_icon_search"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:hint="输入手机号直接添加好友"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/text_color_99gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/text_color_white"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="16dp"
+                android:text="分享链接邀请好友"
+                android:textColor="@color/text_color_33gray"
+                android:textSize="@dimen/text_size_big" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/text_color_white"
+                android:gravity="bottom"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/textview_addfriend_wechat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="12dp"
+                    android:drawableTop="@drawable/cqd_contact_icon_wechat"
+                    android:gravity="center"
+                    android:text="微信好友"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <TextView
+                    android:id="@+id/textview_addfriend_circle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="12dp"
+                    android:drawableTop="@drawable/cqd_contact_icon_circle"
+                    android:gravity="center"
+                    android:text="朋友圈"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <TextView
+                    android:id="@+id/textview_addfriend_qq"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/cqd_contact_icon_qq"
+                    android:gravity="center"
+                    android:text="QQ好友"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <TextView
+                    android:id="@+id/textview_addfriend_contact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@drawable/cqd_contact_icon_contact"
+                    android:gravity="center"
+                    android:text="通讯录"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_middle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lineaylayout_apply_friend"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/text_color_white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="好友通知"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_super_big" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="2dp"
+                    android:drawableRight="@drawable/cqd_contact_icon_right_gray"
+                    android:gravity="center_vertical"
+                    android:text="查看更多"
+                    android:textColor="@color/text_color_66gray"
+                    android:textSize="@dimen/text_size_middle_s" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lineaylayout_apply_friend1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/text_color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageview_addfriend_icon_one"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/cqd_contact_icon_portrait_default" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_addfriend_name_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="好友请求:宋启平"
+                        android:textColor="@color/text_color_33gray"
+                        android:textSize="@dimen/text_size_middle_s" />
+
+                    <TextView
+                        android:id="@+id/textview_addfriend_phone_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="手机号:13888888888"
+                        android:textColor="@color/text_color_33gray"
+                        android:textSize="@dimen/text_size_middle_s" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textview_addfriend_denied_one"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/backgroud_bg_white_gray_selector"
+                    android:gravity="center"
+                    android:text="拒绝"
+                    android:textColor="@color/text_color_99gray"
+                    android:textSize="@dimen/text_size_middle_s" />
+
+                <TextView
+                    android:id="@+id/textview_addfriend_agree_one"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/backgound_button_blue_shape"
+                    android:gravity="center"
+                    android:text="同意"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size_middle_s" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lineaylayout_apply_friend2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/text_color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageview_addfriend_icon_two"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/cqd_contact_icon_portrait_default" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_addfriend_name_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="好友请求:宋启平"
+                        android:textColor="@color/text_color_33gray"
+                        android:textSize="@dimen/text_size_middle_s" />
+
+                    <TextView
+                        android:id="@+id/textview_addfriend_phone_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="手机号:13888888888"
+                        android:textColor="@color/text_color_33gray"
+                        android:textSize="@dimen/text_size_middle_s" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textview_addfriend_denied_two"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/backgroud_bg_white_gray_selector"
+                    android:gravity="center"
+                    android:text="拒绝"
+                    android:textColor="@color/text_color_99gray"
+                    android:textSize="@dimen/text_size_middle_s" />
+
+                <TextView
+                    android:id="@+id/textview_addfriend_agree_two"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/addfriend_agree"
+                    android:gravity="center"
+                    android:text="同意"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size_middle_s" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lineaylayout_maybe_know"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/text_color_white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="可能认识的人"
+                    android:textColor="@color/text_color_33gray"
+                    android:textSize="@dimen/text_size_super_big" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="2dp"
+                    android:drawableRight="@drawable/cqd_contact_icon_right_gray"
+                    android:gravity="center_vertical"
+                    android:text="查看更多"
+                    android:textColor="@color/text_color_66gray"
+                    android:textSize="@dimen/text_size_middle_s" />
+            </LinearLayout>
+
+            <com.youjie.android.view.HorizontalListView
+                android:id="@+id/gridView_addfriend"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/text_color_white"
+                android:visibility="gone">
+
+            </com.youjie.android.view.HorizontalListView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
